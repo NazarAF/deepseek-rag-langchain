@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "94f70c6a-aa60-412c-830e-118d28079de8",
+		"name": "Simple RAG - Deepseek R1",
+		"description": "Collection for testing PDF Question Answering API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18077941"
+	},
+	"item": [
+		{
+			"name": "Upload PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdf",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/upload",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"upload"
+					]
+				},
+				"description": "Upload a PDF file to the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Ask Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question\": \"What did you know about Nazar?\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/ask",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"ask"
+					]
+				},
+				"description": "Ask a question about the uploaded PDF documents"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Documents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/documents?page=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"documents"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
