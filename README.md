@@ -1,4 +1,4 @@
-# PDF Q&A API
+# RAG API
 
 ## Description
 This API allows users to upload PDF documents, process them into vectors, and then perform question-based searches using the Ollama model. The API is built using Express.js and utilizes LangChain for document management and vector-based search.
