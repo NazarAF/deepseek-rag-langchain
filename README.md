@@ -53,9 +53,9 @@ This API allows users to upload PDF documents, process them into vectors, and th
 - Response:
     ```
     {
-    "message": "PDF uploaded successfully",
-    "filename": "1700000000000.pdf",
-    "documentsProcessed": 10
+        "message": "PDF uploaded successfully",
+        "filename": "1700000000000.pdf",
+        "documentsProcessed": 10
     }
     ```
 
@@ -65,14 +65,14 @@ This API allows users to upload PDF documents, process them into vectors, and th
 - Body:
     ```
     {
-    "question": "What is the content of this document?"
+        "question": "What is the content of this document?"
     }
     ```
 - Response:
     ```
     {
-    "think": "Analysis based on documents...",
-    "answer": "The document contains..."
+        "think": "Analysis based on documents...",
+        "answer": "The document contains..."
     }
     ```
 
@@ -82,16 +82,16 @@ This API allows users to upload PDF documents, process them into vectors, and th
 - Response:
     ```
     {
-    "total": 100,
-    "page": 1,
-    "totalPages": 10,
-    "documents": [
-        {
-        "id": 1,
-        "content": "Document content...",
-        "metadata": {}
-        }
-    ]
+        "total": 100,
+        "page": 1,
+        "totalPages": 10,
+        "documents": [
+            {
+            "id": 1,
+            "content": "Document content...",
+            "metadata": {}
+            }
+        ]
     }
     ```
 
