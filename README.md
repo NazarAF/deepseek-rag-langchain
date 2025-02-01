@@ -87,9 +87,9 @@ This API allows users to upload PDF documents, process them into vectors, and th
         "totalPages": 10,
         "documents": [
             {
-            "id": 1,
-            "content": "Document content...",
-            "metadata": {}
+                "id": 1,
+                "content": "Document content...",
+                "metadata": {}
             }
         ]
     }
